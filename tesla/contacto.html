@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>contacto</title>
+
+		<!-- Código para enlazar el CSS -->
+		<link href="style.css" type="text/css" rel="stylesheet">
+
+		<!-- Google Font -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+
+		<!-- Js -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+
+		<!-- alerta formulario -->
+		<script type="text/javascript">
+
+			function valida_mensaje(){
+
+				//escondo la alerta de formulario
+				$(".alertaForm").css("display", "none");
+
+
+				//valido el nombre 
+				if (document.contacto.name.value.length==0 || document.contacto.name.value.length < 2 || document.contacto.name.value == " " || /^\s+$/.test(document.contacto.name.value)){ 
+					$('#alerta-nombre').slideDown();
+					document.contacto.name.focus();
+					return (false); 
+				}
+
+
+				//valido el mail
+				if (document.contacto.mail.value.length==0 || document.contacto.mail.value == " "){ 
+					$('#alerta-correo').slideDown();
+					document.contacto.mail.focus();
+					return (false); 
+				} 
+
+				if ((document.contacto.mail.value.indexOf ('@', 0) == -1)||(document.contacto.mail.value.length < 5)) {
+					$('#alerta-correo').slideDown();
+					document.contacto.mail.focus();
+					return (false); 
+				}
+
+
+				//valido el telefono
+				if (document.contacto.phone.value.length==0 || document.contacto.phone.value.length < 2 || document.contacto.phone.value == " " || /^\s+$/.test(document.contacto.phone.value)){  	
+					$('#alerta-telefono').slideDown();
+					document.contacto.phone.focus();
+					return (false); 
+				}
+
+
+
+				//valido el país
+				if (document.contacto.country.value == 0 || document.contacto.country.value == "0"){  	
+					$('#alerta-pais').slideDown();
+					document.contacto.country.focus();
+					return (false); 
+				}
+
+
+				//valido el servicio
+				if (document.contacto.service.value == 0 || document.contacto.service.value == "0"){  	
+					$('#alerta-servicio').slideDown();
+					document.contacto.service.focus();
+					return (false); 
+				}
+
+
+				if (document.contacto.comments.value.length==0 || document.contacto.comments.value.length < 10){ 
+					$('#alerta-mensaje').slideDown();
+					document.contacto.comments.focus();
+					return (false);  
+				}
+
+
+
+			}
+
+
+		</script>
+
+
+
+	</head>
+
+	<body>
+
+		<!-- ESTA ES LA CABECERA DEL SITIO WEB CON IMAGEN TOP HERO-->
+		<header id="headerInterno">
+
+
+			<div class="boxPageHeader">
+
+				<!-- LOGO -->
+				<div id="wrapLogoInterno">
+					<a href="index.html"><img src="images/tesla-logo.png" alt="Logo tesla" /></a>
+				</div>
+
+
+				<!-- ESTE ES EL MENU PRINCIPAL DEL SITIO WEB -->
+				<nav id="wrapNavInterno">
+					<a href="qsomos.html" class="botonPrincipal">Quiénes Somos</a>
+					<a href="servicios.html" class="botonPrincipal">Servicios</a>
+					<a href="noticias.html" class="botonPrincipal">Noticias</a>
+					<a href="contacto.html" class="botonPrincipal">Contáctanos</a>
+				</nav>
+
+
+				<!-- rompo la flotación de elementos -->
+				<div class="cleaner"></div>
+
+			</div>	
+
+		</header>
+
+		<!-- ---------------------------------------------------------------------- -->
+
+
+		<!-- CONTACTO -->
+		<section class="boxPage">
+
+			<h1 class="titulo-principal">Contacto</h1>
+
+			<div class="wrapFlex">
+
+				<!-- formulario de contacto -->
+				<div class="colm2">
+					<form name="contacto" action="send.php" method="post" onsubmit="valida_mensaje(); return false;">
+
+						<label class="label-form" for="name">Nombres y apellidos <em>*</em></label>
+						<input name="name" type="text" class="campo-form">
+						<div class="alertaForm" id="alerta-nombre">
+							<img src="images/attention.svg" alt="alerta formulario"/>
+							<p>Ingrese su nombre y apellido de manera correcta</p>
+						</div>
+
+
+						<label class="label-form" for="mail">Correo electrónico <em>*</em></label>
+						<input name="mail" type="mail" class="campo-form">
+						<div class="alertaForm"  id="alerta-correo">
+							<img src="images/attention.svg" alt="alerta formulario"/>
+							<p>Ingrese un correo electrónico válido al que podamos responder le</p>
+						</div>
+
+						<label class="label-form" for="phone">Teléfono <em>*</em></label>
+						<input name="phone" type="tel" class="campo-form">
+						<div class="alertaForm"  id="alerta-telefono">
+							<img src="images/attention.svg" alt="alerta formulario"/>
+							<p>Ingrese un número telefónico</p>
+						</div>
+
+						<label class="label-form" for="country">País <em>*</em></label>
+						<select name="country" class="campo-form">
+							<option value="0">Elije tu país</option>
+							<option value="1">Estados Unidos de América</option>
+							<option value="2">España</option>
+							<option value="3">Brasil</option>
+							<option value="4">Colombia</option>
+							<option value="5">México</option>
+						</select>
+						<div class="alertaForm"  id="alerta-pais">
+							<img src="images/attention.svg" alt="alerta formulario"/>
+							<p>Elija un país de residencia</p>
+						</div>
+
+						<label class="label-form" for="service">servicio de interés <em>*</em></label>
+						<select name="service" class="campo-form">
+							<option value="0">Elije el servicio de interés</option>
+							<option value="1">New Build</option>
+							<option value="2">Preservation</option>
+							<option value="3">Renovation</option>
+							<option value="4">Master Planning</option>
+						</select>
+						<div class="alertaForm"   id="alerta-servicio">
+							<img src="images/attention.svg" alt="alerta formulario"/>
+							<p>Elija un servicio por el cual consulta</p>
+						</div>
+
+
+						<label class="label-form" for="comments">Comentarios <em>*</em></label>
+						<textarea name="comments" class="text-form"></textarea>
+						<div class="alertaForm"   id="alerta-mensaje">
+							<img src="images/attention.svg" alt="alerta formulario"/>
+							<p>Ingrese un mensaje o comentario</p>
+						</div>
+
+						<button type="submit" class="btAmpliar">Enviar</button>
+
+					</form>
+				</div>
+
+
+				<!-- Directorio -->
+				<div class="colm1 columna-destacada">
+					<h3 class="titulo-terciario">Ventas</h3>
+					<p class="texto-comun">
+						<b>Teléfono</b>  356 064 9870  <b>ext.</b> 1140 <br>
+						<b>Correo</b> <a href="mailto:administracion@ecologicrenewables.com">administracion@ecologicrenewables.com</a>
+					</p>
+
+					<h3 class="titulo-terciario">Asistencia al Cliente</h3>
+					<p class="texto-comun">
+						<b>Teléfono</b>  356 064 9870  <b>ext.</b> 1145 <br>
+						<b>Correo</b> <a href="mailto:design@ecologicrenewables.com">design@ecologicrenewables.com</a>
+					</p>
+
+					<h3 class="titulo-terciario">Carreras</h3>
+					<p class="texto-comun">
+						<b>Teléfono</b>  356 064 9870  <b>ext.</b> 1150 <br>
+						<b>Correo</b> <a href="mailto:planeacion@ecologicrenewables.com">planeacion@ecologicrenewables.com</a>
+					</p>
+
+					<h3 class="titulo-terciario">Prensa</h3>
+					<p class="texto-comun">
+						<b>Norte America</b>  <br>
+						<b>Correo</b> <a href="mailto:Press@tesla.com">Press@tesla.com</a> <br><br>
+						
+						<b> Europa y Medio Oriente</b> <br>
+						<b>Correo</b> <a href="mailto:EUPress@tesla.com">EUPress@tesla.com</a> <br><br>
+						
+						<b>Australia y Asia</b> <br>
+						<b> Correo</b> <a href="mailto:APACPress@tesla.com">APACPress@tesla.com</a> <br><br>
+					</p>
+				</div>
+
+
+
+			</div>
+
+
+			<div class="wrap-banner">
+				<img src="images/contactanos.jpg" alt="Contact US: 01800 555 8969"/>
+			</div>
+
+
+		</section>
+		<!-- ---------------------------------------------------------------------- -->
+
+
+
+		<!-- FOOTER -->
+		<footer>
+
+			<div id="wrapLogoFooter">
+				<a href="index.html"><img src="images/tesla-logo.png" alt="Logo tesla" /></a>
+			</div>
+
+			<div id="wrapMenuFooter">
+				<a href="qsomos.hmtl" class="botonFooter">Quiénes Somos</a>
+				<a href="servicios.html" class="botonFooter">Servicios</a>
+				<a href="noticias.html" class="botonFooter">Noticias</a>
+				<a href="contacto.html" class="botonFooter">Contáctanos</a>
+			</div>
+
+			<span id="infoLegal">
+				&copy; 2019 - Tesla
+			</span>
+
+		</footer>
+		<!-- ---------------------------------------------------------------------- -->
+
+
+	</body>
+</html>

@@ -1,0 +1,745 @@
+/*
+
+0. ESTILOS GENERALES
+--------------------------
+
+1. COLUMNAS Y CONTENEDORES
+--------------------------
+
+2. TEXTOS COMUNES
+--------------------------
+
+3. HEADER
+--------------------------
+
+4. MENU PRINCIPAL
+--------------------------
+
+5. TOP HERO
+--------------------------
+
+6. TESTIMONIOS
+--------------------------
+
+7. CALL TO ACTION
+--------------------------
+
+8. NOTICIAS
+--------------------------
+
+9. FOOTER
+-------------------------
+
+10. BANNER PÁGINA INTERNA
+-------------------------
+
+11. FORMULARIOS
+-------------------------
+
+12. EQUIPO DE TRABAJO 
+-------------------------
+
+13. SERVICIOS
+-------------------------
+
+*/
+
+
+
+
+
+
+
+/* 0. ESTILOS GENERALES */
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.boxPage {
+	width: 100%;
+	max-width: 1600px;
+	min-width: 400px;
+	margin: auto;
+	padding: 50px 5px;
+}
+.boxPageHeader{
+	width: 100%;
+	max-width: 1600px;
+	min-width: 400px;
+	margin: auto;
+}
+
+.cleaner {
+	clear: both;
+}
+
+
+
+:root {
+	--uno: rgba(102, 120, 0, 1);
+	--dos: rgba(0,87,150,1.00);
+	--tres:rgba(1,158,248,1);
+	--cuatro:rgba(20,30,40,1);
+	--cinco:rgba();
+}
+
+hr{
+	background: var(--uno);
+	width: 70px;
+	height: 1px;
+	border: none;
+	margin: 10px auto;
+}
+
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+/* 1. COLUMNAS Y CONTENEDORES */
+
+.wrapFlex{
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.colm1{
+	flex: 1;
+	padding: 10px;
+}
+.colm2{
+	flex: 2;
+	padding: 10px;
+}
+.colm3{
+	flex: 3;
+	padding: 10px;
+}
+.columna-destacada{
+	background:#E8E8E8;
+	border-radius: 4px;
+	padding: 15px 30px 25px 30px;
+}
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+
+
+/* 2. TEXTOS COMUNUNES */
+h1{
+	font-family: 'Roboto', sans-serif;
+	font-size: 32px;
+	font-weight: 300;
+}
+
+h2{
+	font-family: 'Roboto', sans-serif;
+	font-size: 26px;
+	font-weight: 300;
+}
+
+h3{
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+}
+.tituloSeccion{
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	color: rgba(0,0,0,0.60);
+}
+
+.titulo-principal{
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+	/* peso de la letra */
+	font-weight: 700;
+	color: var(--uno);
+	margin: 10px 0;
+	border-bottom: 1px solid var(--uno);
+}
+.titulo-secundario{
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	/* peso de la letra */
+	font-weight: 700;
+	color:var(--dos);
+	margin: 10px 0;
+	border-bottom: 1px dotted var(--dos);
+}
+
+.titulo-terciario{
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	/* peso de la letra */
+	font-weight: 700;
+	color:var(--dos);
+	margin: 10px 0;
+}
+
+.texto-comun{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	margin-bottom: 10px;
+	text-align: justify;
+}
+
+.texto-comun a{
+	color:var(--dos);
+}
+.texto-comun a:hover{
+	color:rgba(139,200,0,1.00);
+}
+
+.imagen-en-texto{
+	display: block;
+	width: 70%;
+	margin: 15px auto 20px auto;
+	border-bottom: 2px solid var(--tres);
+	box-shadow: 3px 3px 6px #CCC;
+}
+
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+
+/* 3. HEADER */
+
+#headerIndex {
+	background: url("images/fondo-tesla.jpg") 0 0 no-repeat fixed;
+	background-position: center;
+	background-size: cover;
+	padding: 200px 0 200px 0;
+	
+}
+
+#headerInterno {
+	background: var(--cuatro);
+	padding: 20px 0;
+	box-shadow: 0 5px 20px #CCC;
+}
+
+#wrapLogoIndex {
+	width: 380px;
+	padding: 5px;
+	margin: auto;
+}
+
+#wrapLogoInterno {
+	width: 300px;
+	float: left;
+}
+
+#wrapLogoIndex img, #wrapLogoInterno img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+#wrapNavIndex{
+	text-align: center;
+	margin: 20px 0;
+}
+
+#wrapNavInterno {
+	float: right;
+	text-align: right;
+	margin: 30px 0 0 0;
+}
+
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+/* 4. MENU PRINCIPAL */
+.botonPrincipal{
+	font-family: 'Roboto', sans-serif;
+	color: rgba(255,255,255,1);
+	font-size: 18px;
+	background: rgba(0,0,0,0.60);
+	text-decoration: none;
+	margin: 0 5px;
+	padding: 5px 8px 3px 8px;
+	border-radius: 3px;
+	transition: all linear 0.1s;
+}
+
+.botonPrincipal:hover{
+	background: rgba(146,187,0,1.00);
+	padding: 5px 14px 3px 14px;
+}
+
+#viewMenu{
+	
+	width: 10px;
+	margin: 10px auto;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	
+	cursor: pointer;
+	display: none;
+	
+}
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+
+/* 5. TOP HERO */
+#wrapTopHero{
+	width: 60%;
+	margin: 40px auto;
+	text-align: center;
+	background: rgba(0,0,0,0.60);
+}
+
+#tituloHero{
+	font-family: 'Roboto', sans-serif;
+	color: rgba(255,255,255,1);
+	font-size: 45px;
+}
+
+#txtHero {
+	font-family: 'Roboto', sans-serif;
+	color: rgba(255,255,255,1);
+	font-size: 20px;
+}
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+
+/* 6. TESTIMONIOS */
+.thumbTestimonios{
+	width: 100%;
+}
+.thumbTestimonios > img{
+	width: 70%;
+	display: block;
+	margin: auto;
+}
+
+.testimonio{
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+}
+
+.autorTestimonio{
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--dos);
+	font-size: 16px;
+}
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+/* 7. CALL TO ACTION */
+#wrapCalltoAction{
+	background: url("images/fondo-2.jpg") center center no-repeat fixed;
+	background-position: center;
+	background-size: cover;
+	padding: 100px 0;
+}
+
+#callToAction{
+	width: 60%;
+	padding: 20px;
+	background:  rgba(0,0,0,0.60);
+	margin: auto;
+	text-align: center;
+}
+
+#tituloCalltoAction{
+	font-family: 'Roboto', sans-serif;
+	color: rgba(255,255,255,1);
+	font-size: 35px;
+}
+
+#txtCalltoAction{
+	font-family: 'Roboto', sans-serif;
+	color: rgba(255,255,255,1);
+	font-size: 20px;
+}
+
+#botonCalltoAction{
+	font-family: 'Roboto', sans-serif;
+	color: rgba(255,255,255,1);
+	font-size: 16px;
+	text-decoration: none;
+	padding: 6px 15px;
+	border:1px solid rgba(255,255,255,1);
+	border-radius: 3px;
+	transition: all linear 0.1s;
+}
+#botonCalltoAction:hover{
+	color:var(--uno);
+	background: rgba(255, 255, 255, 1);
+	border:1px solid rgba(255, 255, 255, 1);
+}
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+
+/* 8. NOTICIAS */
+.thumbNoticia{
+	width: 100%;
+}
+
+.thumbNoticia img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.btAmpliar{
+	font-family: 'Roboto', sans-serif;
+	color: rgba(255,255,255,1);
+	font-size: 16px;
+	background: var(--uno);
+	text-decoration: none;
+	padding: 5px 8px 3px 8px;
+	border-radius: 3px;
+	transition: all linear 0.1s;
+}
+
+.btAmpliar:hover{
+	background: var(--tres);
+}
+
+
+.indice-noticia{
+	flex: 1;
+	position: relative;
+	margin: 10px 1%;
+}
+
+.indice-noticia img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.texto-noticia-indice{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 10px 10px 25px 10px;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.texto-noticia-indice *{
+	color: rgba(255,255,255,1) !important;
+}
+
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+
+/* 9. FOOTER */
+footer{
+	width: 100%;
+	padding: 50px 0;
+	text-align: center;
+	color: rgba(255,255,255,1);
+	background: var(--cuatro);
+	border-top: 2px solid var(--tres);
+}
+
+#wrapLogoFooter{
+	width: 230px;
+	margin: 10px auto;
+}
+
+#wrapLogoFooter img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+#wrapMenuFooter{
+	margin: 0 0 10px 0;
+}
+
+#infoLegal {
+	font-family: 'Roboto', sans-serif;
+	margin: 10px 0 0 0;
+}
+
+.botonFooter{
+	font-family: 'Roboto', sans-serif;
+	color: rgba(255,255,255,1);
+	font-size: 16px;
+	text-decoration: none;
+	padding: 5px 8px 3px 8px;
+	border-radius: 3px;
+	transition: all linear 0.1s;
+}
+.botonFooter:hover{
+	background: var(--uno);
+}
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+/* 10. BANNER PÁGINA INTERNA */
+#wrapBanner{
+
+}
+
+#wrapBanner img{
+	width:100%;
+	display:block;
+	height: auto;
+}
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+/* 11. FORMULARIOS */
+.label-form{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	color: var(--dos);
+	width: 100%;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.label-form em{
+	color:rgba(127,183,0,1.00);
+	font-style: normal;
+	font-size: 10px;
+}
+
+.campo-form{
+	width: 100%;
+	height: 33px;
+	border:1px solid var(--dos);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	color: rgba(0,0,0,1.00);
+	margin-bottom: 20px;
+}
+
+.text-form{
+	width: 100%;
+	height: 120px;
+	border:1px solid var(--dos);
+	font-family: 'Khula', sans-serif;
+	font-weight: 700;
+	color: rgba(0,0,0,1.00);
+	margin-bottom: 20px;
+}
+
+.alertaForm{
+	margin: 5px 0;
+	border-radius: 3px;
+	border:1px solid rgba(94,120,0,1.0);
+	background: rgb(94,120,0,1.0);
+	padding: 5px;
+	margin: -10px 0 10px 0;
+	/* oculto la alerta */
+	display: none;
+}
+
+.alertaForm img{
+	width: 22px;
+	height: 22px;
+	margin-right: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.alertaForm p{
+	font-family: 'Roboto', sans-serif;
+	color: rgba(black);
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+button{
+	border:none;
+	cursor: pointer;
+}
+
+.wrap-banner{
+	margin: 20px 0;
+	width: 100%;
+}
+
+.wrap-banner img{
+	width: 100%;
+	height: auto;
+}
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+
+
+/* 12. EQUIPO DE TRABAJO */
+
+.wrap-persona-staff{
+	padding:20px 0 20px 0;
+	border-bottom: 1px dotted var(--dos);
+}
+.wrap-thumb-persona-staff{
+	float:left;
+	width:40%;
+	margin-right:5%;
+}
+.wrap-thumb-persona-staff img{
+	width:100%;
+	height:auto;
+	display:block;
+}
+.wrap-txt-staff h4{
+	font-family: 'Roboto', sans-serif;
+	color: var(--dos);
+	font-size: 16px;
+}
+.wrap-txt-staff h5{
+	font-family: 'Roboto', sans-serif;
+	color: var(--dos);
+	font-size: 14px;
+}
+.wrap-txt-staff h5{
+	font-family: 'Roboto', sans-serif;
+	color: var(--dos);
+	font-size: 14px;
+}
+.wrap-txt-staff p{
+	font-family: 'Roboto', sans-serif;
+	color: rgba(51,59,63,1.00);
+	font-size: 12px;
+	text-align:justify;
+}
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+
+/* 13. SERVICIOS */
+.wrapServicio{
+	position: relative;
+	margin: 10px 1% 10px 1%;
+	padding: 0 !important;
+}
+.wrapServicio h2{
+	position: absolute;
+	font-family: 'Khula', sans-serif;
+	color: rgba(255,255,255,1.00);
+	font-size: 18px;
+	width: 90%;
+	padding: 5px;
+	background: rgba(102, 120, 0, 0.9);
+	left: 5%;
+	bottom: 15px;
+	border-left:5px solid var(--dos);
+	transition: all linear 0.1s;
+}
+
+.wrapServicio img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* cambio cuando pasa el mouse */
+.wrapServicio:hover h2{
+	padding: 50px 5px 50px 5px;
+	background: rgba(0,0,0,0.60);
+	bottom: 0;
+	border-left:5px solid rgba(0,87,150,0);
+}
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+
+@media only screen and (max-width: 1200px) {
+	
+	
+	
+}
+
+@media only screen and (max-width: 1000px) {
+
+	#wraptophero{
+		top: 200px
+	}
+	
+	
+	
+}
+
+@media only screen and (max-width: 800px) {
+
+	.wrapFlex{
+		display: flex;
+		flex-flow: column nowrap;
+		
+		
+	}
+	
+	
+	
+}
+
+@media only screen and (max-width: 600px) {
+	
+	.wrapFlex{
+		display: flex;
+		flex-flow: column nowrap;
+		
+		
+	}
+		
+	
+	
+}
+
+@media only screen and (max-width: 400px) {
+
+	
+	.wrapFlex{
+		display: flex;
+		flex-flow: column nowrap;
+		
+		
+	}
+}
